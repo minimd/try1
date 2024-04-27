@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/styled_text.dart';
 
-
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
 
@@ -12,10 +11,13 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-
-  var currentImage = '../resources/dice-images/dice-1.png';
+  var currentImage = 'resources/dice-images/dice-1.png';
   void rollDice() {
-    currentImage = "../resources/dice-images/dice-2.png";
+    setState(() {
+      currentImage = "resources/dice-images/dice-2.png";
+    });
+
+    
   }
 
   @override
